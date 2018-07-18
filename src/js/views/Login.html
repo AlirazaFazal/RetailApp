@@ -1,0 +1,143 @@
+<style>
+    
+    @font-face {
+    font-family: TradeGothicBoldCondTwenty;
+    src: url("fonts/TradeGothic-BoldCondTwenty.woff") format("woff"), url("fonts/TradeGothic-BoldCondTwenty.ttf")  format("truetype");
+}
+    
+    body {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#logo {
+  margin: 0 auto;
+  height: 15%;
+  width: 100%;
+}
+
+    #RetailLogo {
+        margin-top: 30%;
+        position: relative;
+        width: 85%;
+        height: 85%;
+        left: 7.5%;
+    }
+
+    input#username.info {
+        background-image: url("images/username.png");
+        background-size: 10%;
+        border: 1px solid lightslategrey;
+        background-repeat: no-repeat;
+        background-position: left 5px center;
+    }
+
+    input#password.info {
+        background-image: url("images/password.png");
+        background-size: 10%;
+        border: 1px solid lightslategrey;
+        background-repeat: no-repeat;
+        background-position: left 5px center;
+    }
+
+#sign-in{
+  width: 75%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 40%;
+}
+
+.info {
+  padding-left: 15%;
+  top: 10%;
+  border: 1px solid lightslategray;
+  background: white;
+  height: 6%;
+  width: 100%;
+  display: block;
+  margin: 8% 0;
+  border: none;
+  text-align: left;
+  color: #7E878D;
+  font-size: 35%;
+}
+
+    #login {
+        width: 75%;
+        height: 6%;
+        border: none;
+        background: lightslategray;
+        color: white;
+        font-family: TradeGothicBoldCondTwenty;
+        font-weight: bold;
+        font-size: 100%;
+        margin-bottom: 10%;
+        position: fixed;
+    }
+
+    .form-linkone {
+        text-decoration: none;
+        color: lightslategray;
+        font-size: 75%;
+        position: relative;
+        top: 13.5vw;
+        left: 15%;
+    }
+
+.form-linkTwo {
+    text-decoration: none;
+    color: lightslategray;
+    font-size: 75%;
+    position: relative;
+    top: 13.5vw;
+    left: 35%;
+}
+
+.form-link:hover {
+  color: #FFF;
+}
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Shared */
+
+#login-page #login-form .loginBtn:before {
+  content: "";  
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100%;  
+}
+#login-page #login-form .loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+    #fb_button {
+        width: 75%;
+        height: 7%;
+        margin: 20% 0 0 12.5%;
+    }
+
+</style>
+
+<div id="logo"><img id="RetailLogo" src="images/RetailLogo.png" alt="Retail logo"></div>
+  <form id="sign-in" action="../../index.html">
+    <input class="info" id="username" type="text" name="username" placeholder="USERNAME">
+    <input class="info" id="password" type="password" name="password" placeholder="PASSWORD">
+    <button id="login" type="submit">LOGIN</button>
+    <a href="#" class="form-linkone">Register</a>
+    <a href="#" class="form-linktwo">Forgot Password?</a>
+  </form>
+  <div id="login-page">
+  <div id="login-form">   
+     <img src="images/login_with_facebook.png" alt="fb" id="fb_button">
+  </div>
+</div>

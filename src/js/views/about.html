@@ -1,0 +1,108 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<style>
+    
+@font-face {
+    font-family: TradeGothicLT;
+    src: url("fonts/TradeGothicLT.woff") format("woff"), url("fonts/TradeGothicLT.ttf")  format("truetype");
+}     
+    
+.oj-offcanvas-outer-wrapper.oj-offcanvas-page {
+    overflow-y: visible;
+    margin-top: 22%;
+}
+    
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    border: none;
+}
+
+tr:nth-child(even) {
+    background-color: #fff;
+}
+
+img#icon {
+  width: 5%;
+  height: 3%;
+}
+
+img#receipticon {
+  width: 10%;
+  height: 45%;
+}
+
+#receiptContainer {
+	width: 100%;
+	margin: 0 auto; 
+}
+
+img#recentReceipt {
+	position: relative;
+	margin-left: 25%;
+	width: 50%;
+	height: 50%;
+}
+
+#date{
+    font-family: TradeGothicLT;
+    color: lightslategray;
+}
+
+#viewreceipt{
+    font-family: TradeGothicLT;
+    font-size: 80%;
+}
+
+</style>
+
+<script type="text/javascript" charset="utf-8" src="js/viewModels/about.js"></script>
+
+<div class="oj-hybrid-applayout-page">
+  <div class="oj-applayout-fixed-top">
+      <!--
+       ** Oracle JET V4.2.0 hybrid mobile application header pattern.
+       ** Please see the Oracle JET Cookbook App Shell: Hybrid Mobile demos for
+       ** more information on how to use this pattern.
+    -->
+    <header role="banner" class="oj-hybrid-applayout-header" data-bind="ojModule: headerConfig">
+    </header>
+  </div>
+  <!-- This is where your main page content will be loaded -->
+    <div role="main" class="oj-hybrid-applayout-content">
+      <div class="oj-hybrid-padding">
+        <h3 id="likeheader"><img id="icon" src="js/views/images/recent_receipt_blue.png"/> RECENT RECEIPTS</h3>
+    <table>
+  <tr>
+    <td id="date">23RD JAN 2018</td>
+    <td id="viewreceipt" data-bind="click:showReceipt()" ><img id="receipticon" src="js/views/images/view_receipt.png"/> View Receipt</td>
+  </tr>
+  <tr>
+    <td id="date">5TH JAN 2018</td>
+    <td id="viewreceipt"><img id="receipticon" src="js/views/images/view_receipt.png"/> View Receipt</td>
+  </tr>
+  <tr>
+    <td id="date">25TH DEC 2017</td>
+    <td id="viewreceipt"><img id="receipticon" src="js/views/images/view_receipt.png"/> View Receipt</td>
+  </tr>
+</table>
+
+<div id="receiptContainer">
+	<img data-bind="visible:hiddenReceipt" id="recentReceipt" src="js/views/images/receipt.png" />
+</div>
+      </div>
+        <div class="footer">
+	    <div id="chatbotIcon"><img class="chatbotIconImg" src="js/views/images/chatbot.png"/></div>
+	    <div><button class="chatbotbutton" type="submit">LOUISE YOUR RETAIL ASSISTANT</button></div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<style>
+#serviceCloud {
+    height: 100%;
+}
+    .oj-hybrid-applayout-content {
+    margin: -3% 0;
+    height: 195vw;
+}
+
+    .oj-offcanvas-outer-wrapper.oj-offcanvas-page {
+        overflow-y: visible;
+        height: 175vw;
+    }
+</style>
+
+<div class="oj-hybrid-applayout-page">
+  <div class="oj-applayout-fixed-top">
+      <!--
+       ** Oracle JET V4.2.0 hybrid mobile application header pattern.
+       ** Please see the Oracle JET Cookbook App Shell: Hybrid Mobile demos for
+       ** more information on how to use this pattern.
+    -->
+    <header role="banner" class="oj-hybrid-applayout-header" data-bind="ojModule: headerConfig">
+    </header>
+  </div>
+  <!-- This is where your main page content will be loaded -->
+  <div class="oj-applayout-content">
+    <div role="main" class="oj-hybrid-applayout-content">
+        <iframe id="serviceCloud" style="height: 123%; width: 100%" frameborder="0" scrolling="no" src="https://rnowgse01151.rightnowdemo.com/app"></iframe> //reach out to maria ramirez
+<!--
+      <div class="oj-hybrid-padding">
+        <h1>Incidents Content Area</h1>
+        <div>
+          <button data-bind="click: takePicture">Take Pictures of Incident</button>
+          <br/><br/>
+          <ul data-bind="foreach: pics">
+              <li style="list-style: none">
+                  <input type="image"
+                         style="border:1px solid black"
+                         data-bind="attr:{src: $data}"
+                         width="250"
+                         height="250"
+                         alt="No picture taken."/>
+              </li>
+          </ul>
+          <button data-bind="click: scanPicture">Scan</button>
+        </div>
+      </div>
+-->
+    </div>
+  </div>
+</div>

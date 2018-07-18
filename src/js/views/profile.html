@@ -1,0 +1,187 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-applayout-page">
+  <div class="oj-applayout-fixed-top">
+      <!--
+       ** Oracle JET V4.2.0 hybrid mobile application header pattern.
+       ** Please see the Oracle JET Cookbook App Shell: Hybrid Mobile demos for
+       ** more information on how to use this pattern.
+    -->
+    <header role="banner" class="oj-hybrid-applayout-header" data-bind="ojModule: headerConfig">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </header>
+
+      <style>
+        .oj-offcanvas-outer-wrapper.oj-offcanvas-page {
+        overflow-y: visible;
+        height: 175vw;
+    }  
+          
+          @font-face {
+    font-family: TradeGothicLT;
+    src: url("fonts/TradeGothicLT.woff") format("woff"), url("fonts/TradeGothicLT.ttf")  format("truetype");
+} 
+          
+          @font-face {
+    font-family: TradeGothicBoldCondTwenty;
+    src: url("fonts/TradeGothic-BoldCondTwenty.woff") format("woff"), url("fonts/TradeGothic-BoldCondTwenty.ttf")  format("truetype");
+} 
+          
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 6px;
+  color: white;
+  background-color: lightslategray;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 17px;
+  font-family: TradeGothicBoldCondTwenty;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+#profileTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: none;
+    text-align: left;
+    color: lightslategray;
+    font-family: TradeGothicLT;
+}
+          
+td, th {
+text-align: left;
+padding: 8px;
+border: none;
+font-family: TradeGothicLT;
+}
+
+#toggle{
+  text-align: right;
+}
+
+img#icon {
+width: 5%;
+height: 3%;
+}
+
+img#profilepic{
+  width: 55%;
+margin: auto 28%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+</style>
+      
+  </div>
+  <!-- This is where your main page content will be loaded -->
+  <div class="oj-applayout-content">
+    <div role="main" class="oj-hybrid-applayout-content">
+        <div class="oj-hybrid-padding">
+    <h3 id="likeheader"><img id="icon" src="js/views/images/profile_page.png"/> PROFILE</h3>    
+  <img id="profilepic" src="js/views/images/ali_profile_pic.png" alt="Ali" style="width:45%">
+  <div id="likeheader">User Information</div>
+  <table id="profileTable">
+  <tr>
+    <th>FIRSTNAME</th>
+    <td>Aliraza</td>
+  </tr>
+  <tr>
+    <th>LASTNAME</th>
+    <td>Fazal</td>
+  </tr>
+  <tr>
+    <th>DOB</th>
+    <td>21/04/1994</td>
+  </tr>
+  <tr>
+    <th>E-MAIL</th>
+    <td>aliraza.fazal@oracle.com</td>
+  </tr>
+  <tr>
+    <th>MOBILE NO.</th>
+    <td>+447926175080</td>
+  </tr>
+</table>
+<p><button>EDIT PROFILE</button></p>
+<p><button>SAVE</button></p>
+<div id="likeheader">Account Data</div>
+<table>
+  <tr>
+    <td>Clear All Data</td>
+    <td id="toggle"><label class="switch">
+  <input type="checkbox">
+  <span class="slider"></span>
+</label></td>
+  </tr>
+</table>
+
+<p><button>Confirm</button></p>
+    </div>
+      </div>
+  </div>
+</div>

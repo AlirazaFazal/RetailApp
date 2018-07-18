@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\hybrid",
+    "\\src",
+    "\\src\\css",
+    "\\src\\js",
+    "\\src\\js\\jet-composites",
+    "\\src\\js\\jet-composites\\bot-client",
+    "\\src\\js\\viewModels",
+    "\\src\\js\\views"
+  ],
+  "SelectedNode": "\\src\\js\\views\\incidents.html",
+  "PreviewInSolutionExplorer": false
+}

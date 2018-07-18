@@ -1,0 +1,460 @@
+/*
+    Document   : override
+    Created on : <date>
+    Author     : <author>
+    Description:
+        This is where any of your application specific styles should be included
+*/
+
+/* Hides the content area until we are ready to display after paddings have been adjusted. 
+    oj-complete is a marker class that is applied by the appController 
+    after adjusting the content area. */
+.oj-applayout-content:not(.oj-complete) {
+  visibility: hidden;
+}
+
+.oj-fwk-icon:before, .oj-panel-drag-icon:before, .oj-panel-expand-icon:before, .oj-panel-collapse-icon:before, .oj-panel-remove-icon:before, .oj-confirmation.oj-train-icon:before, .oj-error.oj-train-icon:before, .oj-info.oj-train-icon:before, .oj-warning.oj-train-icon:before, .oj-listview-drag-handle:before, .oj-web-applayout-offcanvas-icon:before, .oj-progressstatus-cancel-icon:before, .oj-component-icon:before, .oj-popup-tail.oj-popup-tail-simple:before {
+    display: inline-block;
+    color: #FF6464;
+}
+
+button.chatbotbutton.buttonbottom {
+    bottom: 78%;
+}
+
+.demo-james-icon {
+  width: 80px;
+  height: 80px;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.demo-profile-name {
+  font-size: 1.714rem;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  padding-bottom: 42px;
+}
+
+.demo-app-name {
+  padding-top: 40px;
+  color: lightslategray;
+}
+
+img#RetailLogo{
+    width: 95%;
+    height: 23vw;
+}
+
+.demo-chart-icon-24:before {
+    visibility: hidden;
+}
+
+.demo-fire-icon-24:before {
+    visibility: hidden;
+}
+
+.demo-people-icon-24:before {
+    visibility: hidden;
+}
+
+.oj-offcanvas-outer-wrapper.oj-offcanvas-page {
+    overflow-y: visible;
+    height: 150vw;
+}
+
+@font-face {
+    font-family: TradeGothicLT;
+    src: url("fonts/TradeGothicLT.woff") format("woff"), url("fonts/TradeGothicLT.ttf")  format("truetype");
+}
+
+@font-face {
+    font-family: TradeGothicBoldTwo;
+    src: url("fonts/TradeGothic-BoldTwo.woff") format("woff"), url("fonts/TradeGothic-BoldTwo.ttf")  format("truetype");
+}
+
+@font-face {
+    font-family: TradeGothicBoldCondTwenty;
+    src: url("fonts/TradeGothic-BoldCondTwenty.woff") format("woff"), url("fonts/TradeGothic-BoldCondTwenty.ttf")  format("truetype");
+}
+
+#navDrawer{
+ background: #1C97C2; 
+}
+/* Hides the content area until we are ready to display after paddings have been adjusted. */
+
+.oj-applayout-content.oj-complete {
+    overflow: hidden;
+}
+
+.oj-hybrid-applayout-page {
+    min-height: 100%;
+    background-color: #ffffff;
+}
+
+.oj-hybrid-applayout-content {
+    margin: -3% 0;
+}
+
+.oj-applayout-content:not(.oj-complete) {
+  visibility: hidden;
+}
+
+.oj-navigationlist-item-icon {
+    padding-bottom: 29%;
+}
+
+.oj-navigationlist-item.oj-selected {
+    border-color: red;
+}
+
+.oj-hybrid-applayout-header{
+    box-shadow: 1px 1px lightgray;
+    background: white;
+    height: 18vw;
+}
+
+.oj-flex-bar-start{
+    margin-right: 70%;
+}
+
+.demo-lucy-icon {
+  width: 13%;
+  height: 60%;
+  display: inline-block;
+  padding-top: 5%;
+  padding-bottom: 0px;
+  margin-left: 5%;
+  margin-right: auto;
+}
+
+.demo-profile-name {
+  font-size: 110%;
+  font-family: TradeGothicBoldCondTwenty;
+  text-align: left;
+  color: #fff;
+  padding-bottom: 40%;
+  margin: 0;
+}
+
+.welcomeFont{
+    font-size: 60%;
+    font-family: TradeGothicLT;
+    color: #fff;
+}
+
+.welcomeLucy {
+  padding-bottom: 10%;
+  margin: 0 3%;
+  display: inline-block;
+}
+
+#favourites{
+	display:flex;
+}
+
+#favouritesIcon {
+    z-index: 20;
+    width: 38%;
+    height: 100%;
+    margin: auto 370%;
+}
+
+.pageButtons {
+   font-family: TradeGothicBoldCondTwenty;
+   font-size: 120%;
+}
+
+.oj-contrast-marker .oj-navigationlist-vertical .oj-navigationlist-item.oj-selected {
+  background-color: rgba(0,0,0,0.25);
+} 
+
+#navDrawer{
+ background: lightslategray; 
+}
+
+.oj-contrast-marker a.oj-navigationlist-item-content .oj-navigationlist-item-label{
+ color: #ffffff;
+}
+
+a.oj-navigationlist-item-content {
+    text-decoration: none;
+    font-weight: normal;
+    overflow: hidden;
+    height: 21.5vw;
+}
+
+.oj-navigationlist-item-label{
+ font-size: 120%;
+ padding-bottom: 30%;
+}
+
+#headerwrapper{
+ background: darkgrey;
+ height: 11%;
+}
+
+#lucyHeaderBar {
+    margin: 0 -292%;
+}
+
+#name{
+  color: lightslategray;
+  font-family: TradeGothicBoldTwo;
+  font-weight: bold;
+  display: flex;
+  font-size: 80%;
+  margin-left: 50px;
+}
+
+#name:after {
+  content: '\A';
+  white-space: pre;
+}
+
+#subheading{
+    display: flex;
+    font-family: TradeGothicLT;
+    font-size: 65%;
+    margin-left: 50px;
+    width: 200%;
+}
+
+#likeheader, #basketheader, #basketTotalPrice, #favouriteheader{
+  color: lightslategray;
+  font-family: TradeGothicBoldCondTwenty;
+  font-size: 120%;
+}
+
+#price {
+    color: lightslategray;
+  font-family: TradeGothicBoldTwo;
+  font-size: 80%;
+}
+
+#item{
+  color: lightslategray;
+  font-family: TradeGothicBoldTwo;
+  font-size: 80%;
+}
+
+img#lucyIcon {
+    width: 38px;
+    margin: 0 -635%;
+}
+
+img#binIcon{
+  width: 20%;
+  height: 40%;
+}
+
+img#menuIcons {
+    width: 9.5%;
+    height: 7.5vw;
+    padding-right: 5%;
+}
+
+hr#rule {
+  border-color: rgba(255,255,255,0.6);
+}
+
+.chatbotbutton {
+  z-index: 2;
+  margin: 0 0 6% 21%;
+  display:flex;
+  position:relative;
+  width: 75%;
+  height: 8%;
+  background: #FFFFFF;
+  color: lightslategray;
+  font-family: TradeGothicBoldCondTwenty;
+  font-size: 110%;
+  border-top: white;
+  border-bottom: white;
+  border-left: white;
+  border-right: white;
+}
+
+.chatbotIconImg {
+   z-index: 3;
+   margin-top: -25%;
+   display: flex;
+   position: fixed;
+   width: 100%;
+   height: 7%;
+}
+
+.footer >div {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+img#addfav{
+	height:40%;
+}
+
+img#product{
+	height: 40%;
+}
+
+img#binIcon{
+  width: 20%;
+  height: 40%;
+}
+
+
+table.FavouritesTable {
+    text-align: center;
+    align: center;
+    width: 100%; /* Optional */
+    border-collapse: collapse; 
+    border-spacing: 0;
+}
+
+div#barcodeContainer{
+	width: 100%;
+	height: 100%;
+}
+
+img#barcodeImage{
+	width: 100%;
+	height: 63%;
+}
+
+#backButtonHome {
+    background-color: lightslategray;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    font-family: TradeGothicBoldCondTwenty;
+    float: left;
+    font-size: 16px;
+    top: 68%;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 2% 3% 2% 3%;
+    margin: 0 auto;
+}
+
+table.FavouritesTable tbody,
+table.FavouritesTable thead { 
+	display: block; 
+	border-top: 1px solid #D3D3D3;
+	}
+
+table.FavouritesTable thead tr th { 
+    height: 30px;
+    line-height: 30px;
+    /*text-align: left;*/
+	border-left: 1px solid #D3D3D3;
+    border-right: 1px solid #D3D3D3;
+}
+
+table.FavouritesTable tbody {
+    height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+tbody td, thead th {
+    width: 20%; /* Optional */
+	
+}
+
+table.FavouritesTable tbody td:last-child, 
+table.FavouritesTable thead th:last-child, 
+table.FavouritesTable thead th:last-child {
+    border-right: none;
+}
+
+
+table.FavouritesTable td {
+    border-left: 1px solid #D3D3D3;
+    border-right: 1px solid #D3D3D3;
+}
+
+table.FavouritesTable td:first-child, 
+table.FavouritesTable thead th:first-child {
+    border-left: none;
+}
+
+table.FavouritesTable td:last-child {
+    border-right: none;
+}
+
+table.FavouritesTable td {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+    
+#wrapper {
+    border: 1px solid lightskyblue;
+}
+
+#customer {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    height: 10%;
+}
+
+#customer td, #customer th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    border: none;
+}
+
+#customer tr:nth-child(even){background-color: white;}
+
+#customer tr:hover {background-color: #ddd;}
+
+#customer th {
+    text-align: left;
+    background-color: white;
+    color: #00AFDC;
+}
+
+img#likeIcon{
+	top:0;
+	width:3%;
+	height:1%;
+}
+
+img#favouriteLikeIcon{
+    margin-left: 4%;
+	width:4.5%;
+	height:2.6%;
+}
+
+
+img#tickIcon{
+  width: 17%;
+  height: 30%;
+}
+
+#favouritesItemTableHeader{
+    font-family: TradeGothicBoldCondTwenty;
+    font-size: 80%;
+    width: 42.13%;
+}
+
+#favouritesPriceTableHeader{
+    font-family: TradeGothicBoldCondTwenty;
+    font-size: 80%;
+    width: 42.3%;
+}
+
+#favouritesInstoreTableHeader{
+    font-family: TradeGothicBoldCondTwenty;
+    font-size: 80%;
+}

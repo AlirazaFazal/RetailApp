@@ -1,0 +1,908 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<head>
+    <title>Home</title>
+    
+<link rel="stylesheet" type="text/css" href="../../css/app.css">.    
+    
+<style>
+    
+@font-face {
+    font-family: TradeGothicBoldCondTwenty;
+    src: url("fonts/TradeGothic-BoldCondTwenty.woff") format("woff"), url("fonts/TradeGothic-BoldCondTwenty.ttf")  format("truetype");
+}   
+    
+.oj-offcanvas-outer-wrapper.oj-offcanvas-page {
+    overflow-y: visible;
+    margin-top: 12%;
+}
+    
+.table-scroll {
+	position:relative;
+	max-width:99%;
+	height: 50%;
+	margin:auto;
+	overflow:hidden;
+	border:1px solid lightslategrey;
+	height:auto;
+}
+.table-wrap {
+	width:100%;
+	overflow:auto;
+}
+
+.table-scroll table {
+	width:100%;
+	margin:auto;
+	border-collapse:separate;
+	border-spacing:0;
+}
+.table-scroll th, .table-scroll td {
+	padding:5px 10px;
+	border: none;
+	background:#fff;
+	white-space:nowrap;
+	vertical-align:top;
+}
+.table-scroll thead, .table-scroll tfoot {
+	background:#f9f9f9;
+}
+.clone {
+	position:absolute;
+	top:0;
+	left:0;
+	pointer-events:none;
+}
+.clone th, .clone td {
+	visibility:hidden
+}
+.clone td, .clone th {
+	border-color:transparent;
+}
+.clone tbody th {
+	visibility:visible;
+}
+.clone .fixed-side {
+	border:1px solid #000;
+	background:#eee;
+	visibility:visible;
+}
+.clone thead, .clone tfoot{background:transparent;}
+
+img#likeIcon, img#basketIcon{
+	top:0;
+	width:6%;
+	height:3.5%;
+}
+
+img#addfav{
+	height:40%;
+}
+
+img#product{
+	height: 35%;
+}
+
+    img#basketProduct {
+        width: 75%;
+        margin-left: 3%;
+    }
+
+img#binIcon{
+  width: 20%;
+  height: 40%;
+}
+
+
+table.basketTable {
+    text-align: center;
+    width: 100%; /* Optional */
+    height: 53vw;
+    border-collapse: collapse; 
+    border-spacing: 0;
+    border:1px solid lightslategrey;
+}
+
+table.basketTable tbody,
+table.basketTable thead { display: block; }
+
+thead tr th { 
+    height: 30%;
+    line-height: 30px;
+    /*text-align: left;*/
+}
+
+table.basketTable tbody {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+tbody td, thead th {
+    width: 20%; /* Optional */
+}
+
+tbody td:last-child, thead th:last-child {
+    border-right: none;
+}
+
+#paymentContainer{
+    width: 100%;
+    height: 100%;
+}
+
+#confirmationPage {
+   align-items: center;
+   width:70%;
+   height:40%;
+}
+
+#productbasketTableHeader {
+    font-family: TradeGothicLT;
+    font-size: 60%;
+    margin-left: 60%;
+}
+
+#pricebasketTableHeader {
+    font-family: TradeGothicLT;
+    font-size: 60%;
+    margin-left: 120%;
+}
+
+#quantitybasketTableHeader {
+    font-family: TradeGothicLT;
+    font-size: 60%;
+    margin-left: 150%;
+}
+
+#removebasketTableHeader {
+    font-family: TradeGothicLT;
+    font-size: 60%;
+    margin-left: 195%;
+}
+
+#productbasketTableHeaderTwo {
+    font-family: TradeGothicLT;
+    font-size: 60%;
+    position: absolute;
+    margin-left: 6%;
+}
+
+#pricebasketTableHeaderTwo {
+    font-family: TradeGothicLT;
+    font-size: 60%;
+    position: absolute;
+    margin-left: 25%;
+}
+
+#quantitybasketTableHeaderTwo {
+    font-family: TradeGothicLT;
+    font-size: 60%;
+    position: absolute;
+    margin-left: 43%;
+}
+
+#removebasketTableHeaderTwo {
+    font-family: TradeGothicLT;
+    font-size: 60%;
+    position: relative;
+    left: 60%;
+}
+
+#productbasketTableHeaderThree {
+    font-family: TradeGothicLT;
+    font-size: 60%;
+    position: absolute;
+    margin-left: 6%;
+}
+
+#pricebasketTableHeaderThree {
+    font-family: TradeGothicLT;
+    font-size: 60%;
+    position: absolute;
+    margin-left: 25%;
+}
+
+#quantitybasketTableHeaderThree {
+    font-family: TradeGothicLT;
+    font-size: 60%;
+    position: absolute;
+    margin-left: 43%;
+}
+
+#removebasketTableHeaderThree {
+    font-family: TradeGothicLT;
+    font-size: 60%;
+    position: relative;
+    left: 60%;
+}
+
+#productbasketTableHeaderFour {
+    font-family: TradeGothicLT;
+    font-size: 60%;
+    position: absolute;
+    margin-left: 6%;
+}
+
+#pricebasketTableHeaderFour {
+    font-family: TradeGothicLT;
+    font-size: 60%;
+    position: absolute;
+    margin-left: 25%;
+}
+
+#quantitybasketTableHeaderFour {
+    font-family: TradeGothicLT;
+    font-size: 60%;
+    position: absolute;
+    margin-left: 43%;
+}
+
+#removebasketTableHeaderFour {
+    font-family: TradeGothicLT;
+    font-size: 60%;
+    position: relative;
+    left: 60%;
+}
+
+#wrapper {
+    border: 1px solid lightskyblue;
+}
+
+#customer {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    height: 10%;
+}
+
+#customer td, #customer th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    border: none;
+}
+
+#customer tr:nth-child(even){background-color: white;}
+
+#customer tr:hover {background-color: #ddd;}
+
+#customer th {
+    text-align: left;
+    background-color: white;
+    color: #00AFDC;
+}
+
+#buttons{
+	z-index: 10;
+	display: flex;
+	margin-top:-5%;
+}
+
+    #textInside {
+        position: relative;
+        top: 20%;
+        color: lightslategray;
+    }
+
+    #textInsideTwo {
+        position: relative;
+        top: 20%;
+        color: lightslategray;
+    }
+
+    #textInsideThree {
+        position: relative;
+        top: 20%;
+        color: lightslategray;
+    }
+
+    #textInsideFour {
+        position: relative;
+        top: 20%;
+        color: lightslategray;
+    }
+
+#basketTotalPrice{
+	background-color: #ffffff;
+	z-index:10;
+	width: 25%;
+	height: 9vw;
+	text-align: center;
+	font-size: 18px;
+        font-family: TradeGothicBoldCondTwenty;
+	border-collapse: collapse;
+    border-spacing: 0;
+    margin-left: 5%;
+    border:1px solid lightslategray;
+    border-radius: 2px;
+}
+
+    #basketTotalPriceTwo {
+        background-color: #ffffff;
+        z-index: 10;
+        width: 25%;
+        height: 9vw;
+        text-align: center;
+        font-size: 17px;
+        font-family: TradeGothicBoldCondTwenty;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-left: 5%;
+        margin-top: -5%;
+        border: 1px solid lightslategray;
+        border-radius: 2px;
+    }
+
+    #basketTotalPriceThree {
+        background-color: #ffffff;
+        z-index: 10;
+        width: 25%;
+        height: 9vw;
+        text-align: center;
+        font-size: 17px;
+        font-family: TradeGothicBoldCondTwenty;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-left: 5%;
+        margin-top: -5%;
+        border: 1px solid lightslategray;
+        border-radius: 2px;
+    }
+
+    #basketTotalPriceFour {
+        background-color: #ffffff;
+        z-index: 10;
+        width: 25%;
+        height: 9vw;
+        text-align: center;
+        font-size: 17px;
+        font-family: TradeGothicBoldCondTwenty;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-left: 5%;
+        margin-top: -5%;
+        border: 1px solid lightslategray;
+        border-radius: 2px;
+    }
+
+#checkout {
+	margin-left: 37%;
+    margin-bottom: 29%;
+    width: 35%;
+    height: 50%;
+}
+
+/* scan button */
+    #button {
+        width: 100%;
+        height: 9vw;
+        background-color: lightslategray;
+        border: none;
+        color: white;
+        padding: 6px 29px;
+        text-align: center;
+        display: inline-block;
+        font-size: 17px;
+        font-family: TradeGothicBoldCondTwenty;
+        margin-left: 13%;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    #checkoutInStoreButton {
+        background-color: lightslategray;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-family: TradeGothicBoldCondTwenty;
+        display: block;
+        float: left;
+        font-size: 17px;
+        margin-top: 10%;
+        cursor: pointer;
+        border-radius: 2px;
+        padding: 2.5% 6% 2.5% 6%;
+    }
+
+    #backButton {
+        background-color: lightslategray;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        position: absolute;
+        font-family: TradeGothicBoldCondTwenty;
+        position: absolute;
+        margin-right: 10%;
+        font-size: 16px;
+        top: 80%;
+        right: 81.5%;
+        border-radius: 2px;
+        cursor: pointer;
+        padding: 2% 3% 2% 3%;
+        margin: 0 auto;
+    }
+
+.confirmpaymentwrapper{
+    margin-top: 5%;
+}
+
+    #checkoutNowButton {
+        background-color: lightslategray;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-family: TradeGothicBoldCondTwenty;
+        display: block;
+        float: right;
+        font-size: 17px;
+        margin-top: 10%;
+        cursor: pointer;
+        border-radius: 2px;
+        padding: 2.5% 6% 2.5% 6%;
+    }
+
+    #continueButton {
+        background-color: lightslategray;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-family: TradeGothicBoldCondTwenty;
+        display: block;
+        float: right;
+        font-size: 17px;
+        margin-top: 4%;
+        cursor: pointer;
+        border-radius: 2px;
+        padding: 2.5% 6% 2.5% 6%;
+    }
+
+    #qrcontinueButton {
+        background-color: lightslategray;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-family: TradeGothicBoldCondTwenty;
+        display: block;
+        float: right;
+        font-size: 17px;
+        margin-top: 5%;
+        cursor: pointer;
+        border-radius: 2px;
+        padding: 2.5% 6% 2.5% 6%;
+    }
+
+img#qrcodeImg{
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 60%;
+    height: 95%;
+    display: block;
+    float: left;
+}
+
+#qrtext {
+    margin-top: 13%;
+    margin-right: 7%;
+    display: block;
+    font-family: TradeGothicLT;
+    float: right;
+    font-weight: normal;
+}
+
+#qrcase{
+    display: flex;
+    margin-top: 9%;
+}
+
+    #paymentheader, #confirmpaymentheader {
+        color: lightslategray;
+        font-family: TradeGothicBoldCondTwenty;
+        font-size: 130%;
+    }
+
+img#visaicon {
+    width:18%;
+    height:97%;
+}
+
+img#paypalicon {
+    width:18%;
+    height:97%;
+}
+    
+#hiddenBackButton {
+background: transparent;
+border: none !important;
+font-size:0;
+}
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 5px;
+    height: 5%;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 8px;
+	left: 7px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: white;
+}
+
+.oj-panel {
+    border: 1px solid #d6dfe6;
+    background-color: #fff;
+    border: none;
+    border-radius: 1px;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: .85714rem;
+    margin: 12.5% 0 0 -3%;
+    position: relative;
+    height: 110vw;
+    width: 105%;
+    overflow-y: auto;
+}
+
+.oj-inputtext-input, .oj-inputpassword-input, .oj-inputtext-nocomp, .oj-inputpassword-nocomp {
+    height: 2.28571rem;
+    padding: 2px 2px;
+    padding-top: 2px;
+    box-sizing: border-box;
+    margin: auto -5%;
+    margin-bottom: 5%;
+    width: 89.5%;
+}
+
+.oj-flex {
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 7%;
+}
+
+.oj-listview-container-touch {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
+    margin-right: 10%;
+}
+
+.buttonbottom {margin-top:-144%; position: fixed} /* But with a on clicked parameter 
+
+/*.footer >div {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}*/
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script type="text/javascript" charset="utf-8" src="../../../../../hybrid/platforms/browser/www/cordova.js"></script>
+<!--<script type="text/javascript" src="../../../../CordovaCamera/www/scripts/cordova.js"></script>
+<script type="text/javascript" src="../../../../CordovaCamera/www/scripts/platformOverrides.js"></script>
+<script type="text/javascript" src="../../../../CordovaCamera/www/scripts/index.js"></script>-->
+
+<script>
+
+jQuery(document).ready(function() {
+   jQuery(".likeIt-table").clone(true).appendTo('#table-scroll').addClass('clone');
+   
+
+});
+
+ // Change the selector if needed
+var $table = $('table.basketTable'),
+    $bodyCells = $table.find('tbody tr:first').children(),
+    colWidth;
+
+// Adjust the width of thead cells when window resizes
+$(window).resize(function() {
+    // Get the tbody columns width array
+    colWidth = $bodyCells.map(function() {
+        return $(this).width();
+    }).get();
+    
+    // Set the width of thead columns
+    $table.find('thead tr').children().each(function(i, v) {
+        $(v).width(colWidth[i]);
+    });    
+}).resize(); // Trigger resize handler
+
+
+</script>
+
+</head>
+
+<div class="oj-hybrid-applayout-page">
+  <div class="oj-applayout-fixed-top">
+      <!--
+       ** Oracle JET V4.2.0 hybrid mobile application header pattern.
+       ** Please see the Oracle JET Cookbook App Shell: Hybrid Mobile demos for
+       ** more information on how to use this pattern.
+    -->
+    <header role="banner" class="oj-hybrid-applayout-header" data-bind="ojModule: headerConfig">
+    </header>
+  </div>
+  <!-- This is where your main page content will be loaded -->
+<!--  <div class="oj-applayout-content">-->
+    <div role="main" class="oj-hybrid-applayout-content">
+      <div class="oj-hybrid-padding">
+        <!-- HomePage, like it and basket -->
+	<div data-bind="visible:pageOne">
+	
+    <h3 id="likeheader"><img id="likeIcon" src="js/views/images/like_icon.png"/>  LIKE IT?</h3>
+
+<!--    <button data-bind="click: takePicture">Take Picture!</button>-->
+    
+	<div id="table-scroll" class="table-scroll">
+  	<div class="table-wrap">     
+	<table class="likeIt-table">
+
+      <tbody>
+          <tr>
+              <td style="vertical-align: middle;"><img id="product" src="js/views/images/like_img1.jpg" /></td>
+              <td style="vertical-align: middle;"><img id="product" src="js/views/images/like_img2.jpg" /></td>
+              <td style="vertical-align: middle;"><img id="product" src="js/views/images/like_img3.jpg" /></td>
+              <td style="vertical-align: middle;"><img id="product" src="js/views/images/like_img4.jpg" /></td>
+              <td style="vertical-align: middle;"><img id="product" src="js/views/images/like_img5.jpg" /></td>
+              <td style="vertical-align: middle;"><img id="product" src="js/views/images/like_img6.jpg" /></td>
+              <td style="vertical-align: middle;"><img id="product" src="js/views/images/like_img7.jpg" /></td>
+
+
+
+          </tr>
+        <tr>
+		<td id="price">£37.00  <img id="addfav" src="js/views/images/add_2_fav.png"/></td>
+          <td id="price">£162.00  <img id="addfav" src="js/views/images/add_2_fav.png"/></td>
+          <td id="price">£166.00  <img id="addfav" src="js/views/images/add_2_fav.png"/></td>
+          <td id="price">£37.00  <img id="addfav" src="js/views/images/add_2_fav.png"/></td>
+         <td id="price">£6.50  <img id="addfav" src="js/views/images/add_2_fav.png"/></td>
+         <td id="price">£120.00  <img id="addfav" src="js/views/images/add_2_fav.png"/></td>
+         <td id="price">£33.00  <img id="addfav" src="js/views/images/add_2_fav.png"/></td>
+        
+	
+	</tr>
+      </tbody> 
+    </table>
+    </div>
+    </div>
+
+    <h3 id="basketheader"><img id="basketIcon" src="js/views/images/basket_icon.png"/>  BASKET</h3>
+
+
+	<div class="basketSection">
+		<table class="basketTable">
+    <thead>
+        <tr>
+	    <th></th>
+            <th><div id="productbasketTableHeader">PRODUCT</div></th>
+            <th><div id="pricebasketTableHeader">PRICE</div></th>
+            <th><div id="quantitybasketTableHeader">QUANTITY</div></th>
+            <th><div id="removebasketTableHeader">REMOVE</div></th>
+        </tr>
+    </thead>
+    <tbody id="basketBasket">
+   
+    </tbody>
+	</table>
+
+    <div id="buttons">
+	<div id="basketTotalPrice"><div id="textInside">£0.00</div></div>
+	<div data-bind="click:toggleDiv()" id="checkoutButton"><img id="checkout" src="js/views/images/checkout_enable.png" /></div>
+   <div id="scanButton"><button data-bind="click:scanNewItem" id="button">SCAN</button></div>
+	</div>
+            
+
+	</div>
+	
+	</div>
+	
+
+	<!-- Checkout page -->
+	<div data-bind="visible:pageTwo">
+		
+		    <h3 id="basketheader"><img id="basketIcon" src="js/views/images/basket_icon.png"/>  BASKET</h3>
+
+			<table class="basketTable">
+			<thead>
+			<tr>
+			<th></th>
+            <th id="productbasketTableHeaderTwo">PRODUCT</th>
+            <th id="pricebasketTableHeaderTwo">PRICE</th>
+			<th id="quantitybasketTableHeaderTwo">QUANTITY</th>
+            <th id="removebasketTableHeaderTwo">REMOVE</th>
+            
+			</tr>
+			</thead>
+			<tbody id="basketBasket">
+			
+   
+			</tbody>
+			</table>
+		
+                    <div id="basketTotalPriceTwo"><div id="textInsideTwo">£0.00</div></div>
+                    
+			<div>
+			<button data-bind="click:toggleCheckoutStore()" id="checkoutInStoreButton">CHECKOUT IN STORE</button>
+			<button data-bind="click:togglePayment()" id="checkoutNowButton">CHECKOUT NOW</button>
+			</div>
+			
+			<input id="backButton" type="button" value="BACK" data-bind="click:toggleDiv()" />
+		
+	</div>
+			
+	<!-- Checkout in store page qr code-->
+    <div data-bind="visible:pageThree">
+
+        <h4 id="paymentheader">PAYMENT</h4>
+        <h3 id="basketheader"><img id="basketIcon" src="js/views/images/basket_icon.png" />  BASKET</h3>
+
+        <table class="basketTable">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th id="productbasketTableHeaderThree">PRODUCT</th>
+                    <th id="pricebasketTableHeaderThree">PRICE</th>
+                    <th id="quantitybasketTableHeaderThree">QUANTITY</th>
+                    <th id="removebasketTableHeaderThree">REMOVE</th>
+
+                </tr>
+            </thead>
+            <tbody id="basketBasket"></tbody>
+        </table>
+        <div id="basketTotalPriceThree"><div id="textInsideThree">£0.00</div></div>
+
+        <div id="qrcase">
+            <div><img id="qrcodeImg" src="js/views/images/qr_code.png" /></div>
+            <div id="qrtext">Present this QR Code to the store cashier</div>
+        </div>
+
+        <div>
+
+
+            <input data-bind="click:toggleCheckoutQR()" id="qrcontinueButton" value="CONTINUE" />
+        </div>
+
+    </div>
+	
+	
+	
+	<!-- Checkout in store page pay now -->
+	<div data-bind="visible:pageFour">
+	
+		<h3 id="paymentheader">PAYMENT</h3>
+		<h3 id="basketheader"><img id="basketIcon" src="js/views/images/basket_icon.png"/>  BASKET</h3>
+
+			<table class="basketTable">
+			<thead>
+			<tr>
+			<th></th>
+                        <th id="productbasketTableHeaderFour">PRODUCT</th>
+            <th id="pricebasketTableHeaderFour">PRICE</th>
+			<th id="quantitybasketTableHeaderFour">QUANTITY</th>
+            <th id="removebasketTableHeaderFour">REMOVE</th>
+
+			</tr>
+			</thead>
+			<tbody id="basketBasket">
+			
+			</tbody>
+			</table>
+                <div id="basketTotalPriceFour"><div id="textInsideFour">£0.00</div>
+                </div>
+                
+                <div class="confirmpaymentwrapper">
+                    <h3 id="confirmpaymentheader">CHOOSE PAYMENT METHOD</h3>
+                    <label class="container">
+                        <img id="visaicon" src="js/views/images/visa_img.png" />
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <img id="paypalicon" src="js/views/images/paypal.png" />
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+		<div>
+        <input id="hiddenBackButton" type="button" value="BACK" data-bind="click:toggleCheckoutCard()" />
+		<input id="continueButton" type="button" value="CONFIRM PAYMENT" data-bind="click:toggleDivConfirmation()" />
+    </div>
+	
+	
+	</div>
+        
+    <div data-bind="visible:pageFive">
+        <bot-client id="bot-client"
+                    channel="2F6E32BA-F336-4250-9B89-43D4E8CD3557"
+                    websocket-connection-url="ws://130.61.75.195:8888/chat/ws"
+                    user-id="retail">
+        </bot-client>
+    </div>
+
+<div class="chatbotload">
+    
+</div>
+        
+	</div>
+	
+	
+<!--
+	<div id="barcodeContainer" data-bind="visible:scanBarcode()">
+		<img id="barcodeImage" src="images/price-tag.jpg" />
+		<input id="backButtonHome" type="button" value="Back" data-bind="click:toggleDivHome()" />
+	
+	</div>
+-->
+    
+    <div class="footer">
+	    <div id="chatbotIcon"><img class="chatbotIconImg" src="js/views/images/chatbot.png"/></div>
+            <div><button data-bind="click:togglebot" class="chatbotbutton" type="button">LOUISE YOUR RETAIL ASSISTANT</button></div>
+
+    </div>
+     </div>
+<!--</div>-->
+  </div>
